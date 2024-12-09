@@ -1,0 +1,35 @@
+.product{
+  display: flex;
+  flex-wrap: wrap;
+  &-item{
+    width: 30%;
+    margin: 10px;
+    border: 1px solid orange;
+  }
+  &-image{
+    border: 1px solid orange;
+    aspect-ratio: 4/3;
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &-price-new{
+    color: green;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  &-price-old{
+    text-decoration: line-through;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  &-discount{
+    color: orange;
+    font-weight: 700;
+  }
+  button{
+    padding: 10px;
+    background-color: lightgray;
+  }
+}

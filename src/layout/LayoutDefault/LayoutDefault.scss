@@ -1,0 +1,58 @@
+body{
+  margin: 0 30px;
+}
+.layout-default{
+  
+  .header{
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    &__menu{
+      
+      ul{
+        display: flex;
+      }
+      li{
+        margin-right: 20px;
+        position: relative;
+        
+      }
+      li:hover > ul{
+        display: flex!important;
+      }
+      &--link--active{
+        color: #fff;
+      }
+      &--sub{
+        position: absolute;
+        top: 100%;
+        background-color: orangered;
+        right: 0;
+        flex-direction: column;
+        display: none!important;
+        padding: 0 10px;
+        a{
+          white-space: nowrap;
+          display: block;
+        }
+      } 
+     
+    }
+    
+  }
+  .main{
+    padding: 20px;
+  }
+ 
+  .footer{
+    background-color: orange;
+    text-align: center;
+    padding: 10px 20px;
+  }
+ 
+}
