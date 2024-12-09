@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getCategory } from "../../services/categoryService";
+
 function CategoryList() {
   const [category, setCategory] = useState([]);
   useEffect(() => {
@@ -9,9 +10,18 @@ function CategoryList() {
     }
     fetchApi();
   }, [])
+
+  console.log(category)
+
+  const [filterCategory, setFilterCategory] = useState();
+
   const handleChange = (e) => {
-    console.log(e.target.value);
+    // update cai variable tren redux store - category = "nước hoa"
+    e.preventDefault()
+    dispatch(updateCart(e.target.value))
+    // set category tren redux store = value mới chọn
   }
+
   return (
     <>
       <select onChange={handleChange}>
@@ -22,4 +32,5 @@ function CategoryList() {
     </>
   )
 }
+
 export default CategoryList;
